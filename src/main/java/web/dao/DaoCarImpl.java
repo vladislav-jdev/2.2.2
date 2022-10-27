@@ -1,14 +1,16 @@
 package web.dao;
 
+import org.springframework.stereotype.Repository;
 import web.model.Car;
 import java.util.ArrayList;
 import java.util.List;
 import java.util.stream.Collectors;
 
-public class DaoCarImpl implements DaoCar {
+@Repository
+public class DaoCarImpl implements CarDao {
 
     @Override
-    public List<Car> getCarList(int amount) {
+    public List<Car> getCars(int amount) {
         List<Car> list = new ArrayList<>();
         list.add(new Car(10124, "Mercedes", "Sedan"));
         list.add(new Car(11155, "Ford", "Hatchback"));
